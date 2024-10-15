@@ -1,0 +1,15 @@
+<div class="container-flouid">
+    <%= render(NavigationComponent.new(nav: @nav)) %>
+
+    <div class="container text-center mt-4">
+        <div class="row">
+            <div class="col">
+                <div data-controller="hello">
+                    <input data-hello-target="name" placeholder="Enter your name" type="text">
+                    <button data-action="click->hello#greet">Submit</button>
+                    <p data-hello-target="output"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
