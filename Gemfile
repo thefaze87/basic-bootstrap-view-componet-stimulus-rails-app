@@ -33,7 +33,7 @@ gem "bootsnap", require: false
 
 # Bootstrap
 gem "bootstrap"
-gem "sass-rails"
+gem "cssbundling-rails"
 
 # View Components
 gem "view_component"
