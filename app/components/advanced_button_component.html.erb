@@ -1,0 +1,15 @@
+<!-- app/components/button_component.html.erb -->
+<% if permitted %>
+  <%= tag.button content, **options %>
+<% else %>
+  <%= tag.button content, **options.merge(
+    disabled: true,
+    data: {
+      toggle: 'tooltip',
+      html: true,
+      placement: 'auto',
+      title: NOT_AUTHORIZED_TO_PEFORM_THIS_ACTION_MESSAGE,
+      template: NO_ACCESS_TOOLTIP_TEMPLATE
+    })
+  %>
+<% end %>

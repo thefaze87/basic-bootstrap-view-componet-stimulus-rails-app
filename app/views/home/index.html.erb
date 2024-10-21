@@ -17,5 +17,28 @@
                 <%= render(ButtonComponent.new(btnLabel: "Button", btnHref: "https://www.google.com", btnClass:"test")) %>
             </div>
         </div>
+      <div class="row mt-5">
+        <div class="col">
+          <h3 class="mb-3">Advanced Button Component</h3>
+          <%= render(AdvancedButtonComponent.new(
+            type: AdvancedButtonComponent::PRIMARY,
+            size: AdvancedButtonComponent::LG)) { "Primary Btn" } %>
+          <%= render(AdvancedButtonComponent.new(
+            type: AdvancedButtonComponent::SECONDARY,
+            size: AdvancedButtonComponent::MD)) { "Secondary Btn" } %>
+          <%= render(AdvancedButtonComponent.new(
+            type: AdvancedButtonComponent::TEXT,
+            size: AdvancedButtonComponent::MD)) { "Text Btn" } %>
+        </div>
+        <div class="row mt-5">
+          <div class="col">
+            <h3 class="mb-3">Card Component</h3>
+            <%= render ItemCardComponent.new(title: 'Card Title', description: 'This is the card description') do |component| %>
+              <% component.with_image do %>
+                <%= image_tag("/cat.jpg", alt: "") %>
+              <% end %>
+            <% end %>
+          </div>
+      </div>
     </div>
 </div>
